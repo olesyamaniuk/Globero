@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const menuBtnRef = document.querySelector("[data-menu-button]");
-  const navListRef = document.querySelector(".y-f-navigation-list");
-  const headerRef = document.querySelector(".y-f-header");
-  const navigationRef = document.querySelector(".y-f-navigation");
+  const navListRef = document.querySelector(".y-g-navigation-list");
+  const headerRef = document.querySelector(".y-g-header");
+  const navigationRef = document.querySelector(".y-g-navigation");
 
   menuBtnRef.addEventListener("click", () => {
     menuBtnRef.classList.toggle("is-open");
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     navigationRef.classList.toggle("is-open");
   });
 
-  document.querySelectorAll(".y-f-navigation-link").forEach((n) =>
+  document.querySelectorAll(".y-g-navigation-link").forEach((n) =>
     n.addEventListener("click", () => {
       navListRef.classList.remove("is-open");
       menuBtnRef.classList.remove("is-open");
@@ -20,7 +20,18 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   );
 });
+function toggleAnswer(element) {
+  const answer = element.nextElementSibling;
+  const buttonImg = element.querySelector(".y-g-toggle-button img");
 
+  answer.classList.toggle("open");
+
+  if (answer.classList.contains("open")) {
+    buttonImg.classList.add("rotated");
+  } else {
+    buttonImg.classList.remove("rotated");
+  }
+}
 document.addEventListener("DOMContentLoaded", function () {
   const popup = document.getElementById("cookie-popup");
   const acceptButton = document.getElementById("accept-cookies");
