@@ -915,7 +915,7 @@ a {
 .y-g-toggle-button img.rotated {
   transform: rotate(180deg);
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1203px) {
   .y-g-faq-container {
     padding: 116px 72px 0;
     width: 1440px;
